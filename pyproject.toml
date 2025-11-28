@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "rich_table"
+version = "0.1.0"
+description = "A demonstration package for learning local installs, CLI usage, config loading, and asset packaging."
+authors = [{ name = "RJ" }]
+requires-python = ">=3.10"
+readme = "README.md"
+
+# If you depend on Rich or other libs, add here
+dependencies = [
+    "rich>=14.0",
+]
+
+
+[project.scripts]
+# This creates the console command: rich-table
+rich-table = "rich_table.cli:main"
+
+
+[tool.setuptools]
+# Tells setuptools to include package data (css, notes, etc.)
+include-package-data = true
+
+# Automatically discover the rich_table package and its subpackages
+[tool.setuptools.packages.find]
+include = ["rich_table*"]
+
+
+# Explicitly include non-python files inside the rich_table package
+[tool.setuptools.package-data]
+"rich_table" = [
+    "css/*.css",
+    "notes/*.txt"
+]
