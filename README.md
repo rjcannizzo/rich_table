@@ -1,4 +1,4 @@
-# rich_table
+# Introduction
 
 A small example project to demonstrate: packaging a Python app with non-Python assets, configuration management, and a clean CLI / package layout.  
 Inspired by learning best-practices for real-world Python application packaging and configuration.
