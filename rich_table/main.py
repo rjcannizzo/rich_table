@@ -1,9 +1,10 @@
+from typing import Dict
 from rich.console import Console
 from rich.table import Table
 import os
 
 
-def show():
+def show(config: Dict):
     """Displays a Rich Table"""
     table = Table(title="Star Wars Movies")
 
@@ -18,3 +19,5 @@ def show():
 
     console = Console()
     console.print(table)
+
+    console.print(config)

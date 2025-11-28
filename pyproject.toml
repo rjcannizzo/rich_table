@@ -33,7 +33,5 @@ include = ["rich_table*"]
 
 # Explicitly include non-python files inside the rich_table package
 [tool.setuptools.package-data]
-"rich_table" = [
-    "css/*.css",
-    "notes/*.txt"
-]
+"rich_table" = ["css/**/*", "notes/**/*"]
+
