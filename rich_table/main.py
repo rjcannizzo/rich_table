@@ -1,10 +1,10 @@
-from typing import Dict
+
 from rich.console import Console
 from rich.table import Table
-import os
+from rich_table.config.loader import AppConfig
 
 
-def show(config: Dict):
+def show(config: AppConfig):
     """Displays a Rich Table"""
     table = Table(title="Star Wars Movies")
 
